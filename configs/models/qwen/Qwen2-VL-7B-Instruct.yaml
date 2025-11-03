@@ -1,0 +1,11 @@
+architecture: qwen
+model_path: /home/user/gptdata/zym/codespace_hallucination/ckpts/Qwen2.5-VL-7B-Instruct
+model:
+  - torch_dtype: auto
+output_db: output/Qwen2-VL-7B-Instruct.db
+input_dir: ./data/test-images/
+prompt: "Describe the color in this image in one word."
+pooling_method: None
+modules:
+  - lm_head
+  - visual.blocks.31
